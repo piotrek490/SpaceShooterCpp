@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SFMLprojekt" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/sfmlTEST2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="$$(SFMLLibrariesStaticDebug)" />
+					<Add option="$$(SFMLDependencies)" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/sfmlTEST2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="$$(SFMLLibrariesStaticRelease)" />
+					<Add option="$$(SFMLDependencies)" />
+				</Linker>
+			</Target>
+			<Environment>
+				<Variable name="SFMLDependencies" value="-lfreetype -lglu32 -lopengl32 -lopenal32 -logg -lflac -lvorbis -lvorbisfile -lvorbisenc -lgdi32 -lwinmm -lws2_32" />
+				<Variable name="SFMLDirectory" value="C:\Users\Piotrek\Desktop\SFML\SFML-2.5.1\" />
+				<Variable name="SFMLLibrariesDynamicDebug" value="-lsfml-graphics-d -lsfml-window-d -lsfml-audio-d -lsfml-network-d -lsfml-system-d" />
+				<Variable name="SFMLLibrariesDynamicRelease" value="-lsfml-graphics -lsfml-window -lsfml-audio -lsfml-network -lsfml-system" />
+				<Variable name="SFMLLibrariesStaticDebug" value="-lsfml-graphics-s-d -lsfml-window-s-d -lsfml-audio-s-d -lsfml-network-s-d -lsfml-system-s-d" />
+				<Variable name="SFMLLibrariesStaticRelease" value="-lsfml-graphics-s -lsfml-window-s -lsfml-audio-s -lsfml-network-s -lsfml-system-s" />
+			</Environment>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add option="-DSFML_STATIC" />
+			<Add directory="$$(SFMLDirectory)include" />
+		</Compiler>
+		<Linker>
+			<Add directory="$$(SFMLDirectory)lib" />
+		</Linker>
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
